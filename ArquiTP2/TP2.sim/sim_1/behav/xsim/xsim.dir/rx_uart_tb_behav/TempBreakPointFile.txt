@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+81,true,"/home/gina/Arqui/ArquiTP2/TP2.srcs/sim_1/new/rx_uart_tb.v"

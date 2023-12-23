@@ -1,0 +1,5 @@
+Breakpoint File Version 1.0
+48,true,"/home/gina/Arqui/ArquiTP2/TP2.srcs/sources_1/new/rx_interface.v"
+53,true,"/home/gina/Arqui/ArquiTP2/TP2.srcs/sources_1/new/rx_interface.v"
+62,true,"/home/gina/Arqui/ArquiTP2/TP2.srcs/sources_1/new/rx_interface.v"
+70,true,"/home/gina/Arqui/ArquiTP2/TP2.srcs/sources_1/new/rx_interface.v"

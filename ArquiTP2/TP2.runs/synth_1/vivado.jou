@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Dec 20 22:26:41 2023
+# Process ID: 15619
+# Current directory: /home/gina/Arqui/ArquiTP2/TP2.runs/synth_1
+# Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: /home/gina/Arqui/ArquiTP2/TP2.runs/synth_1/top.vds
+# Journal file: /home/gina/Arqui/ArquiTP2/TP2.runs/synth_1/vivado.jou
+# Running On: gina-Lenovo-V14-ADA, OS: Linux, CPU Frequency: 2400.000 MHz, CPU Physical cores: 4, Host memory: 10291 MB
+#-----------------------------------------------------------
+source top.tcl -notrace

@@ -1,7 +1,7 @@
 module UART
 #(
     
-    parameter NB_OP = 32,
+    parameter NB_OP = 8,
               NB_OPCode = 6,
               SR = 16,
               M = 326,
@@ -9,22 +9,25 @@ module UART
 )
 (
 
+
     input wire clk,
     input wire reset,
-    input wire rx,
-    input wire [NB_OP-1:0] alu_result,
+    input wire rx, // entra rx desde la PC
+    input wire [NB_OP-1:0] data_in, //entra el dato de la interfaz
+    input wire alu_result_ready, // senial que indica que ese dato ya esta disponible
 
-    output wire [NB_OP-1:0] op1,
-    output wire [NB_OP-1:0] op2,
-    output wire [NB_OPCode-1:0] opcode,
-    output wire tx
+    output wire tx, //sale la senial del transmisor hacia la PC
+    output wire rx_done_tick, //sale la senial que el dato en el receptor esta listo, hacia la interfaz
+    output wire data_sent, // senial que el transmisor usa para indicar a la interfaz que el dato ya fue enviado
+    output wire [NB_OP-1:0] data_out_rx // el dato completo que sale del receptor
+    
+    
     
 );
 
     wire s_tick;
-    wire rx_done_tick;
-    wire alu_result_ready;
-    wire [NB_OP-1:0] data_out_rx;
+    //wire [NB_OP-1:0] o_alu_result;
+    
 
     mod_m_counter #(
         .M(M),
@@ -33,21 +36,6 @@ module UART
         .clk(clk),
         .reset(reset),
         .s_tick(s_tick)    
-    );
-
-
-    interface #(
-        .NB_BUFFER(NB_OP),
-        .NB_OPCode(NB_OPCode)
-    ) rx_intf (
-        .clk(clk),
-        .reset(reset),
-        .set_flag(rx_done_tick), //viene desde rx indica que hay un dato listo
-        .rx_input(data_out_rx), //viene desde rx
-        .op1(op1), //hacia la ALU
-        .op2(op2), //hacia la ALU
-        .opcode(opcode), //hacia la ALU
-        .alu_result_ready(alu_result_ready)
     );
     
     rx_uart #(
@@ -71,11 +59,10 @@ module UART
         .clk(clk),
         .reset(reset),
         .s_tick(s_tick),
-        .data_in(alu_result), //desde la interfaz
+        .data_in(data_in), //desde la interfaz
         .tx_start(alu_result_ready), // desde la interfaz   
-        .alu_result_ready(alu_result_ready), 
-        //.tx_done_tick(tx_done_tick), //para que?
-        .tx(tx) //hacia la PC
+        .tx(tx), //hacia la PC
+        .data_sent(data_sent)
     
     );
     

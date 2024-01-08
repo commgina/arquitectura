@@ -1,6 +1,6 @@
 module ALU
 #(
-        parameter BUS_WIDTH = 32,
+        parameter BUS_WIDTH = 8,
         parameter OP_BITS = 6
 )
 (

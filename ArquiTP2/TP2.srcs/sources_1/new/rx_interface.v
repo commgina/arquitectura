@@ -1,80 +1,90 @@
-module interface
+module uart_alu_interface 
 #(
-    parameter NB_BUFFER = 32,
+    parameter NB_OP = 8,
               NB_OPCode = 6
 )
 (
     input wire clk,
     input wire reset,
-    input wire set_flag, // Señal para indicar que hay un dato disponible en el receptor
-    input wire [NB_BUFFER-1:0] rx_input,
-
-    output wire [NB_BUFFER-1:0] op1,
-    output wire [NB_BUFFER-1:0] op2,
-    output wire [NB_OPCode-1:0] opcode,
-    output wire alu_result_ready
+    input wire [NB_OP-1:0] uart_data_in,
+    input wire uart_data_ready,
+    output reg alu_data_ready,
+    output wire [NB_OP-1:0] alu_opA,
+    output wire [NB_OP-1:0] alu_opB,
+    output wire [NB_OPCode-1:0] alu_opCode
 );
 
-    // Registros para almacenar operandos y operador
+    // Definir aquí las señales y registros necesarios para la interfaz
+    reg [2:0] uart_state, uart_state_next; // Estado de la máquina de estados para la interfaz
+    reg [NB_OP-1:0] opA_reg, opA_reg_next;
+    reg [NB_OP-1:0] opB_reg, opB_reg_next;
+    reg [NB_OPCode-1:0] opCode_reg, opCode_reg_next;
     
-    reg [NB_BUFFER-1:0] op1_reg; 
-    reg [NB_BUFFER-1:0] op2_reg;
-    reg [NB_OPCode-1:0] opcode_reg;
-    reg alu_ready_reg;
-    
-    // Variables para rastrear el estado
-    reg [1:0] state;
-
     always @(posedge clk, posedge reset)
     begin
-        if (reset)
+        if(reset)
         begin
-            op1_reg <= 0;
-            op2_reg <= 0;
-            opcode_reg <= 0;
-            state <= 2'b00;
-            alu_ready_reg <= 0;
-        end
+            uart_state <= 3'b000;
+            opA_reg <= 0;
+            opB_reg <= 0;
+            opCode_reg <= 0;
+        end 
         else
         begin
-            if (set_flag) // Si hay un dato disponible en el receptor
-            begin
-                case (state)
-                    2'b00:
-                    begin 
-                        op1_reg <= {op1_reg[NB_BUFFER-1:0], rx_input};
-                        state <= state + 1'b1;
-                    end
-                    2'b01:
-                    begin 
-                        op2_reg <= {op2_reg[NB_BUFFER-1:0], rx_input};
-                        state <= state + 1'b1;
-                    end
-                    2'b10:
-                    begin
-                        opcode_reg <= rx_input[NB_OPCode-1:0];
-                        state <= state + 1'b1;
-                    end        
-                endcase         
-            end
-            else if (state == 2'b11)
-            begin
-                op1_reg <= 0;
-                op2_reg <= 0;
-                opcode_reg <= 0;
-                state = 2'b00;
-                alu_ready_reg <= 1'b1;
-            end
+            uart_state <= uart_state_next;
+            opA_reg <= opA_reg_next;
+            opB_reg <= opB_reg_next;
+            opCode_reg <= opCode_reg_next;
         end
     end
+    
 
-    // Cuando los tres elementos están listos, establece op_ready
-    assign op1 = op1_reg;
-    assign op2 = op2_reg;
-    assign opcode = opcode_reg;
-    assign alu_result_ready = alu_ready_reg;
+    always @* begin
+        // Lógica de la interfaz
+        alu_data_ready = 0;
+        uart_state_next = uart_state;
+        opA_reg_next = opA_reg;
+        opB_reg_next = opB_reg;
+        opCode_reg_next = opCode_reg;
+        case (uart_state)
+            3'b000: // Estado de espera de datos de opA de UART
+            if (uart_data_ready) begin               
+                opA_reg_next = uart_data_in;
+                uart_state_next = 3'b001; // Moverse al siguiente estado
+            end
+            3'b001: // Estado de espera de datos de opB de UART
+            if (uart_data_ready) begin
+                opB_reg_next = uart_data_in;
+                uart_state_next = 3'b010; // Moverse al siguiente estado
+            end
+            3'b010: // Estado de espera de datos de opCode de UART
+            if (uart_data_ready) begin
+                opCode_reg_next =  uart_data_in;                
+                // Señal para indicar a la ALU que puede operar                             
+                uart_state_next = 3'b011; // Moverse al siguiente estado
+            end
+            3'b011:
+            begin
+                alu_data_ready = 1; 
+                uart_state_next = 3'b000; // Volver al estado inicial
+            end
+            default
+            begin
+                alu_data_ready = 0;
+                uart_state_next = 0;
+                opA_reg_next = 0;
+                opB_reg_next = 0;
+                opCode_reg_next = 0;
+            end
+                
+        endcase
+    end
     
-        
-   
-    
+    assign alu_opA = opA_reg;
+    assign alu_opB = opB_reg;
+    assign alu_opCode = opCode_reg;
+
+    // Otras lógicas y asignaciones necesarias
+
 endmodule
+    

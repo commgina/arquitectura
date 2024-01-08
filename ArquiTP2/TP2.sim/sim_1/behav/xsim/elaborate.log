@@ -12,10 +12,11 @@ WARNING: [XSIM 43-4100] "/home/gina/Arqui/ArquiTP2/TP2.sim/sim_1/behav/xsim/glbl
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.mod_m_counter
-Compiling module xil_defaultlib.interface
 Compiling module xil_defaultlib.rx_uart
 Compiling module xil_defaultlib.tx_uart
 Compiling module xil_defaultlib.UART
+Compiling module xil_defaultlib.uart_alu_interface
+Compiling module xil_defaultlib.ALU
 Compiling module xil_defaultlib.tb_uart
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_uart_behav

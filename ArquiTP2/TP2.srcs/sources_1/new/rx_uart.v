@@ -1,6 +1,7 @@
 module rx_uart
 #(
-    parameter NB_OP = 32,
+    parameter NB_OP = 8,
+              NB_OPCode = 6,
               SR = 16
 )
 (
@@ -9,8 +10,8 @@ module rx_uart
     input wire rx, // bit que va a ir transmitiendose cada 16 ticks
     input wire s_tick, // cuando se detecta un ciclo de reloj (stick verdadero) se ingrementa s_reg
                         //una vez s_reg lleva a 16, se transmite un bit
-    output reg rx_done_tick, //
-    output wire [31:0] data_out //datos a recibir
+    output reg rx_done_tick, // termino de recibir los bits
+    output wire [NB_OP-1:0] data_out //datos a enviar a interfaz
 );
 
     //declaracion de los cuatro estados
@@ -27,7 +28,7 @@ module rx_uart
                               //una vez llega a 16 se cambia al estado data para transmitir el primer bit
                               // una vez se almacena un bit, se reinicia hasta 0 y se espera el 16 para volver a transmitir el siguiente
      reg [5:0] n_reg, n_next; //n_next se va incrementando en 1 para ir avanzando por los bits
-     reg [31:0] b_reg, b_next; //registro para almacenar los bits que se van recibiendo
+     reg [NB_OP-1:0] b_reg, b_next; //registro para almacenar los bits que se van recibiendo
      
     
    
@@ -83,11 +84,11 @@ module rx_uart
                     if(s_reg == 15)
                         begin
                             s_next = 0;
-                            b_next = {rx, b_reg[31:1]};
+                            b_next = {rx, b_reg[NB_OP-1:1]};
                             if(n_reg == (NB_OP-1)) //si ya se transmitieron los 32 bits hago un stop
                                 state_next = stop;
-                            else
-                                n_next = n_reg + 1;    
+                            else 
+                                n_next = n_reg + 1;   
                         end
                     else
                         begin
@@ -99,7 +100,8 @@ module rx_uart
                     if(s_reg==(SR-1))
                         begin
                             state_next = idle;
-                            rx_done_tick = 1'b1;
+                            if(rx)
+                                rx_done_tick = 1'b1;
                         end
                     else
                         s_next = s_reg + 1;

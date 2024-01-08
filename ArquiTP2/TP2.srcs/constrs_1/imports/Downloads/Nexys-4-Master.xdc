@@ -60,26 +60,29 @@ set_property PACKAGE_PIN E3 [get_ports clk]
 	#set_property IOSTANDARD LVCMOS33 [get_ports {sw[15]}]
  
 
+# LEDs
+## Bank = 34, Pin name = IO_L24N_T3_34, Sch name = LED0
+set_property PACKAGE_PIN T8 [get_ports data_sent_led]
+set_property IOSTANDARD LVCMOS33 [get_ports data_sent_led]
 
-## LEDs
-##Bank = 34, Pin name = IO_L24N_T3_34,						Sch name = LED0
-set_property PACKAGE_PIN T8 [get_ports {rx_done_tick}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {rx_done_tick}]
-##Bank = 34, Pin name = IO_L21N_T3_DQS_34,					Sch name = LED1
-#set_property PACKAGE_PIN V9 [get_ports {led[1]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
-##Bank = 34, Pin name = IO_L24P_T3_34,						Sch name = LED2
-#set_property PACKAGE_PIN R8 [get_ports {led[2]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {led[2]}]
+## Bank = 34, Pin name = IO_L21N_T3_DQS_34, Sch name = LED1
+#set_property PACKAGE_PIN V9 [get_ports op2_loaded]
+#set_property IOSTANDARD LVCMOS33 [get_ports op2_loaded]
+
+## Bank = 34, Pin name = IO_L24P_T3_34, Sch name = LED2
+#set_property PACKAGE_PIN W9 [get_ports opcode_loaded]
+#set_property IOSTANDARD LVCMOS33 [get_ports opcode_loaded]
+
+
 ##Bank = 34, Pin name = IO_L23N_T3_34,						Sch name = LED3
-#set_property PACKAGE_PIN T6 [get_ports {led[3]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {led[3]}]
+#set_property PACKAGE_PIN T6 [get_ports {opcode[3]}]					
+#	set_property IOSTANDARD LVCMOS33 [get_ports {opcode[3]}]
 ##Bank = 34, Pin name = IO_L12P_T1_MRCC_34,					Sch name = LED4
-#set_property PACKAGE_PIN T5 [get_ports {led[4]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {led[4]}]
+#set_property PACKAGE_PIN T5 [get_ports {opcode[4]}]					
+#	set_property IOSTANDARD LVCMOS33 [get_ports {opcode[4]}]
 ##Bank = 34, Pin name = IO_L12N_T1_MRCC_34,					Sch	name = LED5
-#set_property PACKAGE_PIN T4 [get_ports {led[5]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {led[5]}]
+#set_property PACKAGE_PIN T4 [get_ports {opcode[5]}]					
+#	set_property IOSTANDARD LVCMOS33 [get_ports {opcode[5]}]
 ##Bank = 34, Pin name = IO_L22P_T3_34,						Sch name = LED6
 #set_property PACKAGE_PIN U7 [get_ports {led[6]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {led[6]}]
@@ -720,3 +723,13 @@ set_property PACKAGE_PIN D4 [get_ports tx]
 #set_property PACKAGE_PIN U13 [get_ports {MemAdr[22]}]				
 	#set_property IOSTANDARD LVCMOS33 [get_ports {MemAdr[22]}]
 	
+
+
+## Configuration options, can be used for all designs
+set_property CONFIG_VOLTAGE 3.3 [current_design]
+set_property CFGBVS VCCO [current_design]
+
+## SPI configuration mode options for QSPI boot, can be used for all designs
+set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
+set_property BITSTREAM.CONFIG.CONFIGRATE 33 [current_design]
+set_property CONFIG_MODE SPIx4 [current_design]

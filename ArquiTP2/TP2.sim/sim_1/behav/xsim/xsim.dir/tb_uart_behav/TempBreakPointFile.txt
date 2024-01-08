@@ -1,1 +1,6 @@
 Breakpoint File Version 1.0
+68,true,"/home/gina/Arqui/ArquiTP2/TP2.srcs/sources_1/new/rx_interface.v"
+72,true,"/home/gina/Arqui/ArquiTP2/TP2.srcs/sources_1/new/tx_uart.v"
+70,true,"/home/gina/Arqui/ArquiTP2/TP2.srcs/sources_1/new/tx_uart.v"
+165,true,"/home/gina/Arqui/ArquiTP2/TP2.srcs/sim_1/new/uart_tb.v"
+101,true,"/home/gina/Arqui/ArquiTP2/TP2.srcs/sources_1/new/tx_uart.v"

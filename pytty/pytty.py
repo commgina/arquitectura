@@ -1,42 +1,77 @@
+import sys
 import serial
-import time
+import serial.tools.list_ports
 
-operando_a = int(input("Ingrese el primer operando (decimal): "))
-operando_b = int(input("Ingrese el segundo operando (decimal): "))
-simbolo_operacion = input("Ingrese el símbolo de la operación (+, -, &, |, ^, >>>, >>, ~): ")
+continuar = True
+BAUDRATE = 19200  # Establece la velocidad de baudios para esta comunicación
 
-codigo_operacion = {
-        '+': '32\'b00000000000000000000000000100000',
-        '-': '32\'b00000000000000000000000000100010',
-        '&': '32\'b00000000000000000000000000100100',
-        '|': '32\'b00000000000000000000000000100101',
-        '^': '32\'b00000000000000000000000000100110',
-        '>>>': '32\'b00000000000000000000000000000010',
-        '>>': '32\'b00000000000000000000000000000011',
-        '~': '32\'b00000000000000000000000000100111'
-    }.get(simbolo_operacion, '32\'b00000000000000000000000000000000')
+OPCODES = {
+    'ADD': 0x20,
+    'SUB': 0x22,
+    'AND': 0x24,
+    'OR':  0x25,
+    'XOR': 0x26,
+    'SRA': 0x03,
+    'SRL': 0x02,
+    'NOR': 0x27
+}
 
-bits = codigo_operacion[5:]
-bits_invertidos = bits[::-1]
-codigo_operacion_invertido = "32'b" + bits_invertidos
+class SerialPortControl:
+    def __init__(self, port):
+        self.serial_port = serial.Serial(port, BAUDRATE, timeout=1)
 
-ser = serial.Serial('/dev/ttyUSB1', 19200, timeout=None)
-  # Asegura que los datos se envíen de inmediato
-ser.write(b'1')
-ser.write(operando_a.to_bytes(4, byteorder='little'))
-ser.write(b'0')
-ser.write(b'1')
-ser.write(operando_b.to_bytes(4, byteorder='little'))
-ser.write(b'0')
-ser.write(b'1')
-ser.write(codigo_operacion_invertido.encode('utf-8'))
-ser.write(b'0')
+    def send_serial_data(self):
+        operand1_hex = input('Operando 1 (Hex): ')
+        operand2_hex = input('Operando 2 (Hex): ')
+        operation = input('Seleccione la Operación (ADD, SUB, AND, OR, XOR, NOR, SRA, SRL): ')
 
+        if operation not in OPCODES:
+            print('Operación no válida')
+            return
 
-value = ser.read(4)
-        
-    
+        operand1 = int(operand1_hex, 16)
+        operand2 = int(operand2_hex, 16)
+        selected_operation = OPCODES[operation]
 
-print(value)
+        data_to_send = bytes([operand1, operand2,selected_operation])
+        self.serial_port.write(data_to_send)
 
-ser.close()
+        received_data = self.serial_port.read(1)
+        if len(received_data) == 1:
+            result = int.from_bytes(received_data, byteorder='big')
+            print('Resultado:', hex(result))
+        else:
+            print('Error de recepción: No se recibieron los datos correctamente')
+
+def select_serial_port():
+    ports = serial.tools.list_ports.comports()
+    portList = []
+
+    print("\nLISTA DE PUERTOS DISPONIBLES:")
+    for i, port in enumerate(ports):
+        print(f"{i}: {port.device}")
+        portList.append(port.device)
+    try:
+        selected_port_index = int(input("Seleccione el número de puerto: "))
+        if 0 <= selected_port_index < len(portList):
+            selected_port = portList[selected_port_index]
+            print(f"Puerto seleccionado: {selected_port}")
+            return selected_port
+        else:
+            print("Selección de puerto fuera de rango.")
+            return None
+    except ValueError:
+        print("Entrada no válida. Debe ingresar un número válido.")
+        return None
+
+if __name__ == "__main__":
+    selected_port = select_serial_port()
+    if selected_port:
+        app = SerialPortControl(selected_port)
+        while continuar:
+            app.send_serial_data()
+            response = input('¿Nueva operación? y/n: ')
+            if response == 'y' or response == 'Y':
+                continuar = True
+            if response == 'n' or response == 'N':
+                continuar = False

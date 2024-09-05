@@ -1,0 +1,51 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb2_behav xil_defaultlib.tb2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'o_state' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sim_1/new/mips_tb.v:27]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/ALU.v" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/ALU.v" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.instruction_memory
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.EtapaFETCH
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.mux2(BUS_WIDTH=5)
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.word_extender
+Compiling module xil_defaultlib.mux_aluSrc
+Compiling module xil_defaultlib.shift2left(BUS_WIDTH=26)
+Compiling module xil_defaultlib.sign_extend(BUS_WIDTH=28)
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.EtapaDECODE
+Compiling module xil_defaultlib.mux3
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.mux2(BUS_WIDTH=1)
+Compiling module xil_defaultlib.shift2left
+Compiling module xil_defaultlib.sign_extend(BUS_WIDTH=18)
+Compiling module xil_defaultlib.LatchEX_MEM
+Compiling module xil_defaultlib.EtapaEXECUTE
+Compiling module xil_defaultlib.mux2(BUS_WIDTH=4)
+Compiling module xil_defaultlib.MemoriaDeDatos
+Compiling module xil_defaultlib.LatchMEM_WB
+Compiling module xil_defaultlib.EtapaMEM
+Compiling module xil_defaultlib.UnidadDeForwarding
+Compiling module xil_defaultlib.UnidadDeteccionDeRiesgos
+Compiling module xil_defaultlib.UnidadDeDebug
+Compiling module xil_defaultlib.mod_m_counter
+Compiling module xil_defaultlib.rx_uart
+Compiling module xil_defaultlib.tx_uart
+Compiling module xil_defaultlib.UART
+Compiling module xil_defaultlib.MIPS
+Compiling module xil_defaultlib.tb2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb2_behav

@@ -1,0 +1,519 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Sep  3 21:53:07 2024
+# Process ID: 1704
+# Current directory: C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.runs/synth_1
+# Command line: vivado.exe -log MIPS.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MIPS.tcl
+# Log file: C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.runs/synth_1/MIPS.vds
+# Journal file: C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.runs/synth_1\vivado.jou
+# Running On        :DESKTOP-4L3TTEM
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Athlon Gold 3150U with Radeon Graphics     
+# CPU Frequency     :2396 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :10607 MB
+# Swap memory       :2809 MB
+# Total Virtual     :13416 MB
+# Available Virtual :2447 MB
+#-----------------------------------------------------------
+source MIPS.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 482.020 ; gain = 201.215
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/utils_1/imports/synth_1/Fetch.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/utils_1/imports/synth_1/Fetch.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top MIPS -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11976
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1353.348 ; gain = 448.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'o_send_start', assumed default net type 'wire' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/MIPS.v:63]
+INFO: [Synth 8-11241] undeclared symbol 'o_send_byte', assumed default net type 'wire' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/MIPS.v:64]
+INFO: [Synth 8-11241] undeclared symbol 'post_bloqueo_1_1', assumed default net type 'wire' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/MIPS.v:110]
+INFO: [Synth 8-11241] undeclared symbol 'take_jump_r_uc', assumed default net type 'wire' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/MIPS.v:111]
+INFO: [Synth 8-11241] undeclared symbol 'take_branch_uc', assumed default net type 'wire' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/MIPS.v:112]
+INFO: [Synth 8-6157] synthesizing module 'MIPS' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/MIPS.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EtapaFETCH' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/EtapaFETCH.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PC' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:2]
+INFO: [Synth 8-226] default block is never used [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:2]
+INFO: [Synth 8-6157] synthesizing module 'instruction_memory' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/instruction_register.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_memory' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/instruction_register.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/IF_ID.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/IF_ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'adder' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/pc_adder.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/pc_adder.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'EtapaFETCH' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/EtapaFETCH.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EtapaDECODE' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/EtapaDECODE.v:3]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/control_unit.v:1]
+WARNING: [Synth 8-151] case item 6'b011000 is unreachable [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/control_unit.v:147]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/control_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux2__parameterized0' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:2]
+	Parameter BUS_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'mux2__parameterized0' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:2]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/register_file.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/register_file.v:2]
+INFO: [Synth 8-6157] synthesizing module 'word_extender' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/word_extender.v:4]
+	Parameter BUS_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'word_extender' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/word_extender.v:4]
+INFO: [Synth 8-6157] synthesizing module 'mux_aluSrc' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Downloads/mux_aluSrc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_aluSrc' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Downloads/mux_aluSrc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shift2left' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/shift2left.v:3]
+	Parameter BUS_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'shift2left' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/shift2left.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/sign_extend.v:1]
+	Parameter BUS_WIDTH bound to: 28 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/sign_extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Downloads/ID_EX.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Downloads/ID_EX.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'EtapaDECODE' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/EtapaDECODE.v:3]
+INFO: [Synth 8-6157] synthesizing module 'EtapaEXECUTE' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/EtapaEXECUTE.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mux3' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/mux3.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux3' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/mux3.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux2__parameterized1' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:2]
+	Parameter BUS_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'mux2__parameterized1' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:2]
+INFO: [Synth 8-6157] synthesizing module 'shift2left__parameterized0' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/shift2left.v:3]
+	Parameter BUS_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'shift2left__parameterized0' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/shift2left.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend__parameterized0' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/sign_extend.v:1]
+	Parameter BUS_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend__parameterized0' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/sign_extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'LatchEX_MEM' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/LatchEX_MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'LatchEX_MEM' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/LatchEX_MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EtapaEXECUTE' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/EtapaEXECUTE.v:3]
+INFO: [Synth 8-6157] synthesizing module 'EtapaMEM' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mem.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux2__parameterized2' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:2]
+	Parameter BUS_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'mux2__parameterized2' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mux2.v:2]
+INFO: [Synth 8-6157] synthesizing module 'MemoriaDeDatos' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/MemoriaDeDatos.v:5]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/MemoriaDeDatos.v:33]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/MemoriaDeDatos.v:49]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/MemoriaDeDatos.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'MemoriaDeDatos' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/MemoriaDeDatos.v:5]
+INFO: [Synth 8-6157] synthesizing module 'LatchMEM_WB' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/LatchMEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'LatchMEM_WB' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/LatchMEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EtapaMEM' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/mem.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UnidadDeForwarding' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/UnidadDeForwarding.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'UnidadDeForwarding' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/Arquitectura/UnidadDeForwarding.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UnidadDeteccionDeRiesgos' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/UnidadDeteccionRiesgos.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'UnidadDeteccionDeRiesgos' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/UnidadDeteccionRiesgos.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UnidadDeDebug' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/UnidadDeDebug.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/UnidadDeDebug.v:238]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/UnidadDeDebug.v:346]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/UnidadDeDebug.v:224]
+INFO: [Synth 8-6155] done synthesizing module 'UnidadDeDebug' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/UnidadDeDebug.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UART' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/new/UART.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mod_m_counter' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/new/counter.v:1]
+	Parameter M bound to: 326 - type: integer 
+	Parameter N bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mod_m_counter' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/new/counter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rx_uart' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/new/rx_uart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rx_uart' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/new/rx_uart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tx_uart' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/new/tx_uart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tx_uart' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/new/tx_uart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'UART' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/new/UART.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS' (0#1) [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/MIPS.v:1]
+WARNING: [Synth 8-3848] Net o_take_jump_r_uc in module/entity EtapaDECODE does not have driver. [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/EtapaDECODE.v:54]
+WARNING: [Synth 8-3848] Net o_take_branch_uc in module/entity EtapaDECODE does not have driver. [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/EtapaDECODE.v:55]
+WARNING: [Synth 8-7129] Port i_direccion[31] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[30] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[29] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[28] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[27] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[26] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[25] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[24] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[23] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[22] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[21] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[20] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[19] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[18] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[17] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[16] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[15] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[14] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[13] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[12] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[11] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[10] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[9] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[8] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_direccion[7] in module MemoriaDeDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[31] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[30] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[29] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[28] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[27] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[26] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[25] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[24] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[23] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[22] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[21] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[31] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[30] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[29] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[28] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[27] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[26] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[25] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[24] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[23] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[22] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[21] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[20] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[19] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[18] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[17] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[16] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[15] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[14] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[13] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[12] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[11] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[10] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[9] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[8] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[7] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[6] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[5] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[4] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[3] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[2] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[1] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_forward_b_dato_wb[0] in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_block_latch in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_reset_latch in module EtapaEXECUTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_take_jump_r_uc in module EtapaDECODE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_take_branch_uc in module EtapaDECODE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[31] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[30] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[29] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[28] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[27] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[26] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[25] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[24] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[23] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[22] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[21] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[20] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[19] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[18] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[17] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[16] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[15] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[14] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[13] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[12] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[11] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[10] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[9] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instructionDir[8] in module instruction_memory is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1721.949 ; gain = 817.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1721.949 ; gain = 817.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1721.949 ; gain = 817.078
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.310 . Memory (MB): peak = 1721.949 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/constrs_1/imports/Downloads/Nexys-4-Master.xdc]
+Finished Parsing XDC File [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/constrs_1/imports/Downloads/Nexys-4-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/constrs_1/imports/Downloads/Nexys-4-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MIPS_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/MIPS_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1833.957 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 1833.957 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1833.957 ; gain = 929.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1833.957 ; gain = 929.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1833.957 ; gain = 929.086
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UnidadDeDebug'
+INFO: [Synth 8-802] inferred FSM for state register 'read_stage_reg' in module 'UnidadDeDebug'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'rx_uart'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'tx_uart'
+WARNING: [Synth 8-327] inferring latch for variable 'bloqueo_pc_1_reg' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/new/UnidadDeteccionRiesgos.v:22]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                             0001 |                               00
+                 iSTATE2 |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+*
+                  iSTATE |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'read_stage_reg' using encoding 'one-hot' in module 'UnidadDeDebug'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+           STATE_WAITING |                             0001 |                             0001
+           STATE_PROGRAM |                             0010 |                             0010
+              STATE_STEP |                             1000 |                             1000
+        STATE_CONTINUOUS |                             0100 |                             0100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'UnidadDeDebug'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   start |                               01 |                               01
+                    data |                               10 |                               10
+                    stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'rx_uart'
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg' [C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.srcs/sources_1/imports/new/rx_uart.v:104]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+           STATE_WAITING |                               00 |                              001
+             STATE_START |                               01 |                              010
+              STATE_SEND |                               10 |                              011
+              STATE_STOP |                               11 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'tx_uart'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 1833.957 ; gain = 929.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 1     
+	   3 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input     33 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 52    
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 390   
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 5     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 33    
++---Muxes : 
+	   2 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 11    
+	   4 Input   32 Bit        Muxes := 5     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 444   
+	   4 Input    8 Bit        Muxes := 256   
+	   3 Input    8 Bit        Muxes := 48    
+	   4 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 6     
+	   3 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 3     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 10    
+	   5 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 529   
+	   4 Input    1 Bit        Muxes := 212   
+	   3 Input    1 Bit        Muxes := 68    
+	   5 Input    1 Bit        Muxes := 203   
+	   7 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:49 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:51 ; elapsed = 00:02:01 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:05 ; elapsed = 00:02:15 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:15 ; elapsed = 00:02:25 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:27 ; elapsed = 00:02:37 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:27 ; elapsed = 00:02:37 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:29 ; elapsed = 00:02:40 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:29 ; elapsed = 00:02:40 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:31 ; elapsed = 00:02:42 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:32 ; elapsed = 00:02:42 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    42|
+|3     |LUT1   |    61|
+|4     |LUT2   |   293|
+|5     |LUT3   |   997|
+|6     |LUT4   |   328|
+|7     |LUT5   |  1181|
+|8     |LUT6   |  6822|
+|9     |MUXF7  |  1835|
+|10    |MUXF8  |   699|
+|11    |FDCE   |    38|
+|12    |FDRE   |  4739|
+|13    |FDSE   |     4|
+|14    |LD     |     8|
+|15    |IBUF   |     3|
+|16    |OBUF   |     5|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:32 ; elapsed = 00:02:42 . Memory (MB): peak = 1869.586 ; gain = 964.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:05 ; elapsed = 00:02:34 . Memory (MB): peak = 1869.586 ; gain = 852.707
+Synthesis Optimization Complete : Time (s): cpu = 00:02:32 ; elapsed = 00:02:42 . Memory (MB): peak = 1869.586 ; gain = 964.715
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.359 . Memory (MB): peak = 1869.586 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2584 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1869.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  LD => LDCE: 8 instances
+
+Synth Design complete | Checksum: 4a8e4a2b
+INFO: [Common 17-83] Releasing license: Synthesis
+113 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:45 ; elapsed = 00:02:57 . Memory (MB): peak = 1869.586 ; gain = 1382.617
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1869.586 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.runs/synth_1/MIPS.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file MIPS_utilization_synth.rpt -pb MIPS_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep  3 21:56:21 2024...

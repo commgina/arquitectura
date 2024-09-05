@@ -1,0 +1,278 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Sep  3 22:01:52 2024
+| Host         : DESKTOP-4L3TTEM running 64-bit major release  (build 9200)
+| Command      : report_methodology -file MIPS_methodology_drc_routed.rpt -pb MIPS_methodology_drc_routed.pb -rpx MIPS_methodology_drc_routed.rpx
+| Design       : MIPS
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 48
++-----------+----------+--------------------------------+------------+
+| Rule      | Severity | Description                    | Violations |
++-----------+----------+--------------------------------+------------+
+| TIMING-16 | Warning  | Large setup violation          | 32         |
+| TIMING-18 | Warning  | Missing input or output delay  | 7          |
+| TIMING-20 | Warning  | Non-clocked latch              | 8          |
+| LATCH-1   | Advisory | Existing latches in the design | 1          |
++-----------+----------+--------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.880 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.949 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.996 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -2.026 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -2.032 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -2.034 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -2.036 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -2.038 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -2.043 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -2.046 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -2.064 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -2.067 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -2.069 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -2.074 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -2.077 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -2.084 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -2.092 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -2.093 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -2.112 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -2.118 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -2.121 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -2.124 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -2.125 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -2.129 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -2.148 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -2.178 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -2.182 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -2.198 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -2.216 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -2.216 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -2.233 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -2.235 ns between etapaDECODE/latchidex/o_instruction_reg[17]/C (clocked by sys_clk_pin) and etapaFETCH/program_counter/pc_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on i_rx relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on rst relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on o_state[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on o_state[1] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on o_state[2] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on o_state[3] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on o_tx relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch uart/rx_uart_instance/data_out_reg[0] cannot be properly analyzed as its control pin uart/rx_uart_instance/data_out_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch uart/rx_uart_instance/data_out_reg[1] cannot be properly analyzed as its control pin uart/rx_uart_instance/data_out_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch uart/rx_uart_instance/data_out_reg[2] cannot be properly analyzed as its control pin uart/rx_uart_instance/data_out_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch uart/rx_uart_instance/data_out_reg[3] cannot be properly analyzed as its control pin uart/rx_uart_instance/data_out_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch uart/rx_uart_instance/data_out_reg[4] cannot be properly analyzed as its control pin uart/rx_uart_instance/data_out_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch uart/rx_uart_instance/data_out_reg[5] cannot be properly analyzed as its control pin uart/rx_uart_instance/data_out_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch uart/rx_uart_instance/data_out_reg[6] cannot be properly analyzed as its control pin uart/rx_uart_instance/data_out_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch uart/rx_uart_instance/data_out_reg[7] cannot be properly analyzed as its control pin uart/rx_uart_instance/data_out_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 8 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+

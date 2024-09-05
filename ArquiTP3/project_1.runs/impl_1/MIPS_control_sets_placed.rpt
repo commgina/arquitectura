@@ -1,0 +1,523 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Sep  3 21:58:49 2024
+| Host         : DESKTOP-4L3TTEM running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file MIPS_control_sets_placed.rpt
+| Design       : MIPS
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   445 |
+|    Minimum number of control sets                        |   445 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    83 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   445 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     8 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |   389 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    41 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              12 |            6 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              98 |           45 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              38 |           10 |
+| Yes          | Yes                   | No                     |            4641 |         2826 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------+----------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|                  Clock Signal                  |                 Enable Signal                |             Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------+----------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG                                 | uart/tx_uart_instance/tx0_out                | rst_IBUF                                 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                 |                                              |                                          |                2 |              2 |         1.00 |
+| ~clk_IBUF_BUFG                                 |                                              |                                          |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG                                 |                                              | rst_IBUF                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                                 | uart/counter_instance/E[0]                   | rst_IBUF                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                                 | uart/rx_uart_instance/s_next                 | rst_IBUF                                 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                                 | uart/tx_uart_instance/bit_counter[3]_i_1_n_0 | rst_IBUF                                 |                1 |              4 |         4.00 |
+| ~clk_IBUF_BUFG                                 | udd/state[3]_i_1_n_0                         | rst_IBUF                                 |                1 |              4 |         4.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_dir_un_reg[4]_i_1_n_0                  | rst_IBUF                                 |                1 |              5 |         5.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_dir_mem_datos[6]_i_1_n_0               | rst_IBUF                                 |                2 |              5 |         2.50 |
+| ~clk_IBUF_BUFG                                 | udd/read_pointer[4]_i_1_n_0                  | udd/read_delay_flag                      |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                 | uart/rx_uart_instance/n_next                 | rst_IBUF                                 |                2 |              6 |         3.00 |
+| ~clk_IBUF_BUFG                                 |                                              | udd/read_delay_flag                      |                2 |              7 |         3.50 |
+|  uart/rx_uart_instance/data_out_reg[7]_i_1_n_0 |                                              |                                          |                2 |              8 |         4.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_68[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_86[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_59[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_6[0]                      | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_82[0]                     | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_67[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_85[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_77[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_95[0]                     | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_73[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_81[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_91[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_72[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_7[0]                      | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_60[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_74[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_88[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_90[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_92[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_61[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_69[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_79[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_87[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_70[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_89[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_97[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_63[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_62[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_sel_mem_datos_reg_24[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_sel_mem_datos_reg_28[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | uart/rx_uart_instance/b_next                 | rst_IBUF                                 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_0[0]              | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_2[0]              | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_4[0]              | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_5[0]              | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_6[0]              | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_7[0]              | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_1[0]              | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_10[0]             | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_11[0]             | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_8[0]              | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_9[0]              | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_dir_mem_instr_reg[6]_3[0]              | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_53[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_20[0]                | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_1[0]                 | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_11[0]                | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_32[0]                | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_36[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_33[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_41[0]                | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_46[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_17[0]                | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_35[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_56[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_57[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_22[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_15[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_19[0]                | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_2[0]                 | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_24[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_38[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_4[0]                 | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_43[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_13[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_28[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_3[0]                 | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_27[0]                | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_30[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_34[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_37[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_40[0]                | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_26[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_10[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_16[0]                | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_25[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_12[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_14[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_18[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_44[0]                | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_29[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_45[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_48[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_5[0]                 | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_0[0]                 | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_47[0]                | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_50[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_21[0]                | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_51[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_54[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_55[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_31[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_39[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_42[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_23[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_49[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_52[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_68[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_7[0]                 | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_74[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_8[0]                 | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_84[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_87[0]                | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_58[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_9[0]                 | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_67[0]                | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_61[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_79[0]                | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_85[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_6[0]                 | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_1[0]             | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_10[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_11[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_12[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_59[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_13[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_63[0]                | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_71[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_75[0]                | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_14[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_17[0]            | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_20[0]            | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_60[0]                | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_19[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_21[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_24[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_25[0]            | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_66[0]                | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_78[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_2[0]             | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_26[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_27[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_72[0]                | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_3[0]             | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_30[0]            | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_64[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_76[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_0[0]             | udd/reset_out_debug                      |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_31[0]            | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_70[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_28[0]            | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_29[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_86[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_81[0]                | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_16[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_32[0]            | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_33[0]            | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_82[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_69[0]                | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_80[0]                | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_15[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_22[0]            | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_23[0]            | udd/reset_out_debug                      |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_34[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_35[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_65[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_77[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_83[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_62[0]                | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_18[0]            | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_73[0]                | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_6[0]             | udd/reset_out_debug                      |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_36[0]            | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_61[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_5[0]             | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_68[0]            | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_64[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_70[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_72[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_55[0]            | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_60[0]            | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_50[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_74[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_39[0]            | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_86[0]            | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_48[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_87[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_7[0]             | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_37[0]            | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_56[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_63[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_41[0]            | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_47[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_67[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_49[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_52[0]            | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_69[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_79[0]            | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_82[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_62[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_88[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_45[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_84[0]            | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_89[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_8[0]             | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_51[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_9[0]             | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_43[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_65[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_58[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_71[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_73[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_4[0]             | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_42[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_44[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_46[0]            | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_54[0]            | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_57[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_59[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_75[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_78[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_76[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_83[0]            | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_53[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_90[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_91[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_92[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_0[0]          | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_81[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_85[0]            | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_38[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_77[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_80[0]            | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_40[0]            | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep_66[0]            | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_31[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_36[0]         | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_15[0]         | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_25[0]         | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_11[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_20[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_18[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_35[0]         | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_2[0]          | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_27[0]         | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_32[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_37[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_4[0]          | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_46[0]         | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_19[0]         | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_58[0]         | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_24[0]         | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_28[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_43[0]         | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_54[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_10[0]         | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_12[0]         | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_41[0]         | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_50[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_40[0]         | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_16[0]         | udd/reset_out_debug                      |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_6[0]          | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_23[0]         | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_60[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_61[0]         | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_7[0]          | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_34[0]         | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_48[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_51[0]         | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_26[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_13[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_33[0]         | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_44[0]         | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_3[0]          | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_56[0]         | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_62[0]         | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_1[0]          | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_29[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_42[0]         | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_30[0]         | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_38[0]         | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_39[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_22[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_45[0]         | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_5[0]          | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_55[0]         | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_47[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_8[0]          | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_21[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_9[0]          | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_17[0]         | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_49[0]         | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_52[0]         | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_53[0]         | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_57[0]         | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_59[0]         | udd/reset_out_debug                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                 | udd/o_sel_mem_instr_reg_rep__0_14[0]         | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                 | udd/o_send_start_reg_0[0]                    | rst_IBUF                                 |                3 |              8 |         2.67 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/E[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_14[0]     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_15[0]     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_16[0]     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_10[0]     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_2[0]      | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_3[0]      | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_11[0]     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_1[0]      | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_12[0]     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_13[0]     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_9[0]      | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_4[0]      | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_8[0]      | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_7[0]      | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_6[0]      | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWrite_reg_5[0]      | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_send_byte[7]_i_1_n_0                   | rst_IBUF                                 |                3 |              8 |         2.67 |
+| ~clk_IBUF_BUFG                                 | udd/E[0]                                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_39[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_dir_mem_datos_reg[5]_13[0]             | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_10[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_101[0]                    | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_17[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_26[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_33[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_46[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_54[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_20[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_1[0]                      | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_18[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg[0]                        | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_2[0]                      | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_12[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_27[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_34[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_36[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_37[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_40[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_22[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_14[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_45[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_5[0]                      | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_29[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_103[0]                    | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_13[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_4[0]                      | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_41[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_42[0]                     | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_47[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_0[0]                      | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_21[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_19[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_25[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_28[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_35[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_38[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_24[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_43[0]                     | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_44[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_102[0]                    | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_30[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_49[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_51[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_48[0]                     | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_52[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_53[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_56[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_11[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_100[0]                    | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWidth_reg[1][0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_15[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_3[0]                      | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_31[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_sel_mem_datos_reg_27[0]                | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_16[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_32[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_23[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_50[0]                     | udd/reset_out_debug                      |                3 |              8 |         2.67 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_55[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_57[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_58[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_75[0]                     | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_78[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_8[0]                      | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_65[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_80[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_64[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_83[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_93[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_76[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_94[0]                     | udd/reset_out_debug                      |                6 |              8 |         1.33 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_66[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_84[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_96[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_98[0]                     | udd/reset_out_debug                      |                5 |              8 |         1.60 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_71[0]                     | udd/reset_out_debug                      |                7 |              8 |         1.14 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_9[0]                      | udd/reset_out_debug                      |                8 |              8 |         1.00 |
+| ~clk_IBUF_BUFG                                 | udd/o_memWrite_reg_99[0]                     | udd/reset_out_debug                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                 |                                              | uart/counter_instance/counter[8]_i_1_n_0 |                2 |              9 |         4.50 |
+| ~clk_IBUF_BUFG                                 | udd/state_program_pointer[7]_i_1_n_0         | rst_IBUF                                 |                4 |             14 |         3.50 |
+| ~clk_IBUF_BUFG                                 |                                              | rst_IBUF                                 |               10 |             14 |         1.40 |
+| ~clk_IBUF_BUFG                                 | udd/state_program_instruction[23]_i_1_n_0    | rst_IBUF                                 |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_17[0]  | udd/reset_out_debug                      |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_19[0]  | udd/reset_out_debug                      |               24 |             32 |         1.33 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_2[0]   | udd/reset_out_debug                      |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_10[0]  | udd/reset_out_debug                      |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_20[0]  | udd/reset_out_debug                      |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_21[0]  | udd/reset_out_debug                      |               23 |             32 |         1.39 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_22[0]  | udd/reset_out_debug                      |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_18[0]  | udd/reset_out_debug                      |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[0]_0[0]   | udd/reset_out_debug                      |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[0]_2[0]   | udd/reset_out_debug                      |               23 |             32 |         1.39 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[0]_1[0]   | udd/reset_out_debug                      |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_11[0]  | udd/reset_out_debug                      |               23 |             32 |         1.39 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_13[0]  | udd/reset_out_debug                      |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_14[0]  | udd/reset_out_debug                      |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_15[0]  | udd/reset_out_debug                      |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_1[0]   | udd/reset_out_debug                      |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_16[0]  | udd/reset_out_debug                      |               23 |             32 |         1.39 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[2]_0[0]   | udd/reset_out_debug                      |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_12[0]  | udd/reset_out_debug                      |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_27[0]  | udd/reset_out_debug                      |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_26[0]  | udd/reset_out_debug                      |               23 |             32 |         1.39 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_7[0]   | udd/reset_out_debug                      |               24 |             32 |         1.33 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_3[0]   | udd/reset_out_debug                      |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_23[0]  | udd/reset_out_debug                      |               25 |             32 |         1.28 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_24[0]  | udd/reset_out_debug                      |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_6[0]   | udd/reset_out_debug                      |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_8[0]   | udd/reset_out_debug                      |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_5[0]   | udd/reset_out_debug                      |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_25[0]  | udd/reset_out_debug                      |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_4[0]   | udd/reset_out_debug                      |               18 |             32 |         1.78 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_memWidth_reg[0]_0[0]   | udd/reset_out_debug                      |               14 |             32 |         2.29 |
+| ~clk_IBUF_BUFG                                 | udd/read_send_word[31]_i_1_n_0               | rst_IBUF                                 |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_regDst_reg_2[0]        | udd/reset_out_debug                      |               32 |             32 |         1.00 |
+| ~clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_regDst_reg_0[0]        | udd/SR[0]                                |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG                                 | etapaMEM/latch/o_writeRegister_reg[3]_9[0]   | udd/reset_out_debug                      |               22 |             32 |         1.45 |
+| ~clk_IBUF_BUFG                                 | udd/o_dir_mem_instr[7]_i_1_n_0               | rst_IBUF                                 |               17 |             38 |         2.24 |
+| ~clk_IBUF_BUFG                                 |                                              | udd/reset_out_debug                      |               29 |             64 |         2.21 |
+|  clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_regDst_reg_0[0]        | udd/reset_out_debug                      |               27 |             65 |         2.41 |
+|  clk_IBUF_BUFG                                 | udd/p_0_in                                   | udd/reset_out_debug                      |               52 |            114 |         2.19 |
+|  clk_IBUF_BUFG                                 | etapaEXECUTE/ex_mem/o_regDst_reg_1[0]        | udd/reset_out_debug                      |               66 |            170 |         2.58 |
++------------------------------------------------+----------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+
+

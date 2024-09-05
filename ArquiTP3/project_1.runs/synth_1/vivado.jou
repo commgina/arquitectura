@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Sep  3 21:53:07 2024
+# Process ID: 1704
+# Current directory: C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.runs/synth_1
+# Command line: vivado.exe -log MIPS.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MIPS.tcl
+# Log file: C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.runs/synth_1/MIPS.vds
+# Journal file: C:/Users/Gina/Desktop/Arquitectura/MIPS/project_1.runs/synth_1\vivado.jou
+# Running On        :DESKTOP-4L3TTEM
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Athlon Gold 3150U with Radeon Graphics     
+# CPU Frequency     :2396 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :10607 MB
+# Swap memory       :2809 MB
+# Total Virtual     :13416 MB
+# Available Virtual :2447 MB
+#-----------------------------------------------------------
+source MIPS.tcl -notrace

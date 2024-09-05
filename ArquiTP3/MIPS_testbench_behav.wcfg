@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_mips_uart_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_mips_uart" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="36,293,773.832 ns"></ZoomStartTime>
+      <ZoomEndTime time="36,294,050.846 ns"></ZoomEndTime>
+      <Cursor1Time time="36,293,944.460 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="275"></NameColumnWidth>
+      <ValueColumnWidth column_width="106"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="35" />
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/o_takeBranch" type="logic">
+      <obj_property name="ElementShortName">o_takeBranch</obj_property>
+      <obj_property name="ObjectShortName">o_takeBranch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/i_takeBranch" type="logic">
+      <obj_property name="ElementShortName">i_takeBranch</obj_property>
+      <obj_property name="ObjectShortName">i_takeBranch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/i_pcplus4" type="array">
+      <obj_property name="ElementShortName">i_pcplus4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pcplus4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/branch_address_extended" type="array">
+      <obj_property name="ElementShortName">branch_address_extended[31:0]</obj_property>
+      <obj_property name="ObjectShortName">branch_address_extended[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/sumador0/output_c" type="array">
+      <obj_property name="ElementShortName">output_c[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_c[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/zero" type="logic">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/mux_branch_0/o_dato" type="array">
+      <obj_property name="ElementShortName">o_dato[0:0]</obj_property>
+      <obj_property name="ObjectShortName">o_dato[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/i_srcA" type="array">
+      <obj_property name="ElementShortName">i_srcA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_srcA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/i_srcB" type="array">
+      <obj_property name="ElementShortName">i_srcB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_srcB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/branch_output_0" type="logic">
+      <obj_property name="ElementShortName">branch_output_0</obj_property>
+      <obj_property name="ObjectShortName">branch_output_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaFETCH/takeBranch" type="logic">
+      <obj_property name="ElementShortName">takeBranch</obj_property>
+      <obj_property name="ObjectShortName">takeBranch</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaFETCH/takeJumpAddress" type="array">
+      <obj_property name="ElementShortName">takeJumpAddress[31:0]</obj_property>
+      <obj_property name="ObjectShortName">takeJumpAddress[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaFETCH/takeBranchAddress" type="array">
+      <obj_property name="ElementShortName">takeBranchAddress[31:0]</obj_property>
+      <obj_property name="ObjectShortName">takeBranchAddress[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/i_srcB" type="array">
+      <obj_property name="ElementShortName">i_srcB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_srcB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/i_srcA" type="array">
+      <obj_property name="ElementShortName">i_srcA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_srcA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/latchidex/srcA" type="array">
+      <obj_property name="ElementShortName">srcA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">srcA[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/latchidex/srcB" type="array">
+      <obj_property name="ElementShortName">srcB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">srcB[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/latchidex/o_srcA" type="array">
+      <obj_property name="ElementShortName">o_srcA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_srcA[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/latchidex/o_srcB" type="array">
+      <obj_property name="ElementShortName">o_srcB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_srcB[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/alu/i_srcA" type="array">
+      <obj_property name="ElementShortName">i_srcA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_srcA[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/alu/i_srcB" type="array">
+      <obj_property name="ElementShortName">i_srcB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_srcB[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/alu/i_ALUOp" type="array">
+      <obj_property name="ElementShortName">i_ALUOp[5:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ALUOp[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/alu/zero" type="logic">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaEXECUTE/alu/result" type="array">
+      <obj_property name="ElementShortName">result[32:0]</obj_property>
+      <obj_property name="ObjectShortName">result[32:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/cu/ALUSrc" type="logic">
+      <obj_property name="ElementShortName">ALUSrc</obj_property>
+      <obj_property name="ObjectShortName">ALUSrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/muxalusrc/srcB" type="array">
+      <obj_property name="ElementShortName">srcB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">srcB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/rf/read_data1" type="array">
+      <obj_property name="ElementShortName">read_data1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/rf/read_data2" type="array">
+      <obj_property name="ElementShortName">read_data2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/takeJump" type="logic">
+      <obj_property name="ElementShortName">takeJump</obj_property>
+      <obj_property name="ObjectShortName">takeJump</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/jumpAddress" type="array">
+      <obj_property name="ElementShortName">jumpAddress[31:0]</obj_property>
+      <obj_property name="ObjectShortName">jumpAddress[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaFETCH/program_counter/pc" type="array">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaFETCH/sumador_pc/output_c" type="array">
+      <obj_property name="ElementShortName">output_c[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_c[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/etapaDECODE/cu/halt" type="logic">
+      <obj_property name="ElementShortName">halt</obj_property>
+      <obj_property name="ObjectShortName">halt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/mips_inst/udd/o_state" type="array">
+      <obj_property name="ElementShortName">o_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">o_state[3:0]</obj_property>
+   </wvobject>
+</wave_config>
